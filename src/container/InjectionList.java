@@ -1,6 +1,7 @@
 package container;
 
 import data.Injection;
+import data.Student;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -337,8 +338,9 @@ public class InjectionList {
                 for (int j = 0; j < arr.length; j++) {
                     if (list.get(i).getStudentId().equalsIgnoreCase(arr[j])) {
                         System.out.println("Name: " + listStudent.searchStudentId(arr[j]).getName());
-                        System.out.println("\n|   ID   | StudentId | VaccineId |     1st Injection Place    | 1st Injection Date |     2nd Injection Place    | 2nd Injection Date |");
+                        System.out.println("|   ID   | StudentId | VaccineId |     1st Injection Place    | 1st Injection Date |     2nd Injection Place    | 2nd Injection Date |");
                         list.get(i).printInjection();
+                        System.out.println();
                         count++;
                     }
                 }
@@ -348,6 +350,75 @@ public class InjectionList {
             else 
                 System.out.println("No injection information available for this student \"" + name + "\"!\n");
         }
+    }
+    
+    public void printListOfStudentWhoHaveHadInjection1() {
+        int count = 0;
+        if (list.isEmpty())
+            System.out.println("List injection is empty! Nothing to show!\n");
+        else {
+            for (int i = 0; i < list.size(); i++)
+                if (list.get(i).getPlace1() != null && list.get(i).getPlace2() == null) {
+                    System.out.printf("| Injection ID: %s\n", list.get(i).getId());
+                    System.out.printf("| Student ID: %s, Student Name: %s\n", list.get(i).getStudentId(), listStudent.searchStudentId(list.get(i).getStudentId()).getName());
+                    System.out.printf("| Vaccine ID: %s, Vaccine Name: %s\n", list.get(i).getVaccineId(), listVaccine.searchVaccineId(list.get(i).getVaccineId()).getName());
+                    System.out.printf("| 1st Injection date: %10s, 1st Injection place: %s\n\n", list.get(i).getDate1(), list.get(i).getPlace1());
+                    count++;
+                }
+        }
+        if (count == 0)
+            System.out.println("List of students who have had injection 1 is empty!\n");
+        else
+            System.out.println(count + " vaccination information has been found!\n");
+    }
+    
+    public void printListOfStudentsWhoHaveHadBothInjections() {
+        int count = 0;
+        if (list.isEmpty())
+            System.out.println("List injection is empty! Nothing to show!\n");
+        else {
+            for (int i = 0; i < list.size(); i++)
+                if (list.get(i).getPlace1() != null && list.get(i).getPlace2() != null) {
+                    System.out.printf("| Injection ID: %s\n", list.get(i).getId());
+                    System.out.printf("| Student ID: %s, Student Name: %s\n", list.get(i).getStudentId(), listStudent.searchStudentId(list.get(i).getStudentId()).getName());
+                    System.out.printf("| Vaccine ID: %s, Vaccine Name: %s\n", list.get(i).getVaccineId(), listVaccine.searchVaccineId(list.get(i).getVaccineId()).getName());
+                    System.out.printf("| 1st Injection date: %10s, 1st Injection place: %s\n", list.get(i).getDate1(), list.get(i).getPlace1());
+                    System.out.printf("| 2nd Injection date: %10s, 2nd Injection place: %s\n\n", list.get(i).getDate2(), list.get(i).getPlace2());
+                    count++;
+                }
+        }
+        if (count == 0)
+            System.out.println("List of students who have had both injections is empty!\n");
+        else
+            System.out.println(count + " vaccination information has been found!\n");
+    }
+    
+    public void printListOfStudentWhoHaveNotHadAnyInjection() {
+        if (list.isEmpty()) {
+            System.out.println("List injection is empty! Nothing to show!\n");
+            return;
+        }
+        int count = 0;
+        String arr[] = new String[list.size()];
+        for (int i = 0; i < list.size(); i++)
+            arr[i] = list.get(i).getStudentId();
+        Student arrSt[] = listStudent.returnArrayOfStudent();
+        for (int i = 0; i < arrSt.length; i++) {
+            int count2 = 0;
+            for (int j = 0; j < arr.length; j++) {
+                if (arrSt[i].getId().equalsIgnoreCase(arr[j])) {
+                    count2++;
+                }
+            }
+            if (count2 == 0) {
+                System.out.printf("|StudentID: %-8s , Name: %-25s\n", arrSt[i].getId(), arrSt[i].getName());
+                count++;
+            }
+        }
+        if (count == 0)
+            System.out.println("List of students who have not had any injections is empty!\n");
+        else
+            System.out.println(count + " student information has been found!\n");
     }
     
     public void saveToFile() {

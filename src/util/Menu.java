@@ -13,8 +13,9 @@ public class Menu {
         System.out.println("3. Updating information of students' vaccine injection");
         System.out.println("4. Delete student vaccine injection information");
         System.out.println("5. Search injection information");
-        System.out.println("6. Store data to file");
-        System.out.println("7. Store data to file with encrypt MDF5");
-        System.out.println("8. Others - Quit");
+        System.out.println("6. Print injection information");
+        System.out.println("7. Store data to file");
+        System.out.println("8. Store data to file with encrypt MDF5");
+        System.out.println("9. Others - Quit");
     }
 }

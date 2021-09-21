@@ -26,10 +26,6 @@ public class StudentList {
         list.add(student);
     }
     
-    public int getSize() {
-        return list.size();
-    }
-    
     public String[] searchStudentByNameReturnStudentId (String name) {
         int count = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -45,6 +41,13 @@ public class StudentList {
             }
         }
         return arrId;
+    }
+    
+    public Student[] returnArrayOfStudent() {
+        Student arr[] = new Student[list.size()];
+        for (int i = 0; i < list.size(); i++) 
+            arr[i] = list.get(i);
+        return arr;
     }
     
     public Student searchStudentId(String studentId) {
