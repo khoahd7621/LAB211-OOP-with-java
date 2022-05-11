@@ -23,9 +23,9 @@ The main project folder that for practicing and completing 2 topics that lecture
 
 #| Name | Description
 -| ---- | -----------
-1| [topic Folder](https://github.com/khoahd7621/OOP-with-Java-Lab-LAP211/Topic) | -----------
-2| [Covid19 Folder](https://github.com/khoahd7621/OOP-with-Java-Lab-LAP211/Covid19VaccineManagement) | -----------
-3| [Food Folder](https://github.com/khoahd7621/OOP-with-Java-Lab-LAP211/FoodRefrigeratorManagement) | -----------
+1| [Topic Folder](https://github.com/khoahd7621/OOP-with-Java-Lab-LAB211/tree/main/Topic) | -----------
+2| [Covid19 Folder](https://github.com/khoahd7621/OOP-with-Java-Lab-LAP211/tree/main/Covid19VaccineManagement) | -----------
+3| [Food Folder](https://github.com/khoahd7621/OOP-with-Java-Lab-LAP211/tree/main/FoodRefrigeratorManagement) | -----------
 
 ## License & Copyright
 
