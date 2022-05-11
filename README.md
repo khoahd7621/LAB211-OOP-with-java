@@ -1,10 +1,34 @@
-# Welcome to My Lap211 Java Project -  Covid19VaccineManagement Project
+# :yum: Welcome to LAB211 - OOP with Java Lab
 
-## You will find in this repo:
+The main project folder that for practicing and completing 2 topics that lecturer giving.
 
-* NetBeans Apache Ant project
-* .gitignore file for NetBEans project
-* README.md - this file itself - using Markdown language
-* Thanks for visit here
+## You will find in this repo the following stuff:
+* The Covid-19 Vaccine Management Console App folder solution
+* The Food Refrigerator Management Console App folder solution
 
-### © 2021 khoahd7621 | fb/hoangdangkhoa.7621
+## Table of Contents
+
+- [Description](#description)
+- [Technology](#technology)
+- [Useful Resources](#useful-resources)
+- [License & Copyright](#license--copyright)
+
+## Description
+- This console app is use for submitting and getting score to pass LAB211
+
+## Technology
+- Java
+
+## Useful Resources
+
+#| Name | Description
+-| ---- | -----------
+1| [topic Folder](https://github.com/khoahd7621/OOP-with-Java-Lab-LAP211/Topic) | -----------
+2| [Covid19 Folder](https://github.com/khoahd7621/OOP-with-Java-Lab-LAP211/Covid19VaccineManagement) | -----------
+3| [Food Folder](https://github.com/khoahd7621/OOP-with-Java-Lab-LAP211/FoodRefrigeratorManagement) | -----------
+
+## License & Copyright
+
+&copy; 2021 Khoa Dang Hoang khoahd7621 
+
+> :love_you_gesture: Feel free to use my repository and star it if you find something interesting :love_you_gesture:
